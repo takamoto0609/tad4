@@ -1,0 +1,52 @@
+<div class="index_body">
+  <div class="index_body_map">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <em>メールアドレス</em><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <em>パスワード</em><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit "ログイン", class:"btn-shared"%>
+    </div>
+    <br>
+    <div>
+      <a href="/users/sign_up" class="btn-shared">→新規登録はこちら</a>
+    </div>
+    <% end %>
+
+  </div>
+  <div class="index_body_menu">
+    <div class="index_body_menu_1">
+      <p>現在のポイント</p>
+      <b style="font-size: 24px;">100000P</b>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">洗濯機</b>を探す</a>
+      </div>
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">乾燥機</b>を探す</a>
+      </div>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">現在地</b>を登録</a>
+      </div>
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 16px;">ポイントメニュー</b></a>
+      </div>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 16px;">サービス</b>を提供</a>
+      </div>
+    </div>
+  </div>
+</div>
