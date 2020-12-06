@@ -11,14 +11,13 @@
   display: flex;
   width: 100%;
   height: 600px;
-  background-color: #8c04ec;
 
   &_map {
     width: calc(100% - 300px);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8c04ec;
+    background: linear-gradient(-135deg, #069df5, #8c04ec);
 
     &_area {
       width: 96%;
@@ -30,7 +29,7 @@
   &_menu {
     width: 300px;
     padding: 10px;
-    background-color: #069df5;
+    background: linear-gradient(-135deg, #069df5, #8c04ec);
 
     &_1 {
       width: 90%;
