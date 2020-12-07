@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_12_07_041228) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "wash_power_id", null: false
-    t.integer "dry_power_id", null: false
+    t.integer "wash_power_id"
+    t.integer "dry_power_id"
     t.integer "start_time_id", null: false
     t.integer "end_time_id", null: false
     t.integer "status_id", null: false
