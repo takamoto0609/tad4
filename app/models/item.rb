@@ -9,4 +9,7 @@ class Item < ApplicationRecord
   belongs_to :status
 
   validates :comment, :address, :point, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 end
