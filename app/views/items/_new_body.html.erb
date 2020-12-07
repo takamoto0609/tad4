@@ -1,0 +1,42 @@
+<div class="index_body">
+  <div class="index_body_map">
+    <%= form_with(model: @item, url:items_path, local: true) do |f| %>
+    洗濯重量　<%= f.collection_select(:wash_power_id, WashPower.all, :id, :name, {include_blank: "---"}) %>まで<br><br>
+    乾燥重量　<%= f.collection_select(:dry_power_id, DryPower.all, :id, :name, {include_blank: "---"}) %>まで<br><br>
+    受付開始　<%= f.collection_select(:start_time_id, StartTime.all, :id, :name, {include_blank: "---"}) %>から<br><br>
+    受付終了　<%= f.collection_select(:end_time_id, EndTime.all, :id, :name, {include_blank: "---"}) %>まで<br><br>
+    看板　　　<%= f.collection_select(:status_id, Status.all, :id, :name, {include_blank: "---"}) %><br><br>
+    <%= f.text_field :point, placeholder:"設定ポイント" %>P<br><br>
+    <%= f.text_field :address, placeholder:"設置場所" %><br><br>
+    <%= f.text_area :comment, placeholder:"コメント" %><br><br>
+    <%= f.submit "登録", class:"btn-shared" %>
+    <% end %>
+  </div>
+  <div class="index_body_menu">
+    <div class="index_body_menu_1">
+      <p>現在のポイント</p>
+      <b style="font-size: 24px;">100000P</b>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">洗濯機</b>を探す</a>
+      </div>
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">乾燥機</b>を探す</a>
+      </div>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 22px;">現在地</b>を登録</a>
+      </div>
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 16px;">ポイントメニュー</b></a>
+      </div>
+    </div>
+    <div class="index_body_menu_2">
+      <div>
+        <a href="#" class="search_btn btn-shared"><b style="font-size: 16px;">サービス</b>を提供</a>
+      </div>
+    </div>
+  </div>
+</div>
