@@ -1,6 +1,8 @@
 <div class="index_body">
   <div class="index_body_map">
-    <%= render "map_index" %>
+    <% @items.each do |item|%>
+    <%= item.point %>/<%= item.address %>/<%= item.latitude %>/<%= item.longitude %><br>
+    <% end %>
   </div>
   <div class="index_body_menu">
     <div class="index_body_menu_1">
