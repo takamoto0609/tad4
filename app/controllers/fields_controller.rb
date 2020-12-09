@@ -10,6 +10,9 @@ class FieldsController < ApplicationController
   def create
     field = Field.new(field_params)
     if field.valid?
+      if Field.find_by(user_id: current_user.id) != nil
+        Field.find_by(user_id: current_user.id).destroy
+      end
       Field.create(field_params)
       redirect_to :root
     else

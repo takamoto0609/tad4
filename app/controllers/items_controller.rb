@@ -2,6 +2,12 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     gon.items = @items
+    if Field.find_by(user_id: current_user.id) != nil
+      gon.lat = Field.find_by(user_id: current_user.id).latitude
+      gon.lng = Field.find_by(user_id: current_user.id).longitude
+      @lat = Field.find_by(user_id: current_user.id).latitude
+      @lng = Field.find_by(user_id: current_user.id).longitude
+    end
   end
 
   def new

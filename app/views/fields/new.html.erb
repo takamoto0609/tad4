@@ -3,7 +3,7 @@
   <div class="index_body">
     <div class="index_body_map">
       <%= form_with(model: @field, url:fields_path, local: true) do |f| %>
-      <%= f.text_field :address, placeholder:"設置場所" %><br><br>
+      <%= f.text_field :address, placeholder:"現在地" %><br><br>
       <%= f.submit "登録", class:"btn-shared" %>
       <% end %>
     </div>
